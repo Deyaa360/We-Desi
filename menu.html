@@ -13,48 +13,39 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
     <style>
-        .tab {
-            display: flex;
-            justify-content: center;
-            border-bottom: 1px solid var(--primary-color);
-            background-color: var(--gradient-1);
-            margin-top: 50px;
+        body {
+            background-image: url('./assets/images/hero-slider-2.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .menu-item {
+            margin-bottom: 20px;
         }
 
-        .tab button {
-            background-color: transparent;
-            border: 1px solid var(--primary-color);
-            outline: none;
-            cursor: pointer;
-            padding: 14px 20px;
-            transition: 0.3s;
-            font-size: 16px;
-            font-family: 'DM Sans', sans-serif;
-            margin: 0 5px;
-            border-radius: var(--radius-24) var(--radius-24) 0 0;
-            color: var(--primary-color);
+        .menu-item h3 {
+            font-size: 26px;
+            margin-bottom: 5px;
         }
 
-        .tab button:hover {
-            background-color: var(--primary-color);
-            color: var(--secondary-color);
+        .menu-item p {
+            font-size: 18px;
+            margin-bottom: 10px;
         }
 
-        .tab button.active {
-            background-color: var(--primary-color);
-            color: var(--secondary-color);
-            border-bottom: none;
-            padding-bottom: 16px;
+        .container {
+            padding-left: 20px;
+            padding-right: 20px;
         }
 
-        .tab-content {
-            display: none;
-            padding: 20px;
-            border-top: none;
+        @media (max-width: 768px) {
+            .container {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
         }
-
-        .tab-content.active {
-            display: block;
+        .label-2 {
+            font-size: 18px;
         }
     </style>
 </head>
@@ -113,13 +104,13 @@
                         </a>
                     </li>
                     <li class="navbar-item">
-                        <a href="file:///C:/Users/deyaa/Desktop/WeDesi/restaurant-main/restaurant-main/index.html#about" class="navbar-link hover-underline">
+                        <a href="#about" class="navbar-link hover-underline">
                             <div class="separator"></div>
                             <span class="span">About Us</span>
                         </a>
                     </li>
                     <li class="navbar-item">
-                        <a href="file:///C:/Users/deyaa/Desktop/WeDesi/restaurant-main/restaurant-main/index.html#contact" class="navbar-link hover-underline">
+                        <a href="#contact" class="navbar-link hover-underline">
                             <div class="separator"></div>
                             <span class="span">Contact</span>
                         </a>
@@ -153,10 +144,6 @@
     </header>
     <main style="padding-top: 300px;">
         <article>
-            <div class="tab">
-                <button class="tablinks active" onclick="openTab(event, 'CompleteMenu')">Complete Menu</button>
-                <button class="tablinks" onclick="openTab(event, 'PreFixNonVeg')">Pre-Fix Non-Veg</button>
-            </div>
             <section id="CompleteMenu" class="tab-content active">
                 <p class="menu-text text-center" style="padding: 10px;">
                     Open every day from <span class="span">11:00 a.m.</span> to <span class="span">9:00 p.m.</span>
@@ -164,239 +151,126 @@
                 <section class="section menu" aria-label="menu-label" id="menu">
                     <div class="container">
                         <p class="section-subtitle text-center label-2">Small Plates</p>
-                        <ul class="grid-list">
-                            <li>
-                                <div class="menu-card hover:card">
-                                    <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                                        <img src="./assets/images/Samosa Chat.jpg" width="100" height="100" loading="lazy" alt="Chicken Biryani" class="img-cover">
-                                    </figure>
-                                    <div>
-                                        <div class="title-wrapper">
-                                            <h3 class="title-3">
-                                                <a href="#" class="card-title">Samosa Chat</a>
-                                            </h3>
-                                            <span class="badge label-1">Popular</span>
-                                        </div>
-                                        <p class="card-text label-1">
-                                            Samosas, chickpeas, yogurt, tamarind and green chutney, onions, and sev.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="menu-card hover:card">
-                                    <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                                        <img src="./assets/images/Okra & Guac.jpg" width="100" height="100" loading="lazy" alt="Dal Makhani" class="img-cover">
-                                    </figure>
-                                    <div>
-                                        <div class="title-wrapper">
-                                            <h3 class="title-3">
-                                                <a href="#" class="card-title">Okra & Guac</a>
-                                            </h3>
-                                        </div>
-                                        <p class="card-text label-1">
-                                            Crispy okra served with guacamole pineapple chutney.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="menu-card hover:card">
-                                    <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                                        <img src="./assets/images/Crispy Cauliflower.jpg" width="100" height="100" loading="lazy" alt="Chicken Tikka Roll" class="img-cover">
-                                    </figure>
-                                    <div>
-                                        <div class="title-wrapper">
-                                            <h3 class="title-3">
-                                                <a href="#" class="card-title">Crispy Cauliflower</a>
-                                            </h3>
-                                        </div>
-                                        <p class="card-text label-1">
-                                            Cauliflower florets tossed in a mango, chilli and honey glaze.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="menu-card hover:card">
-                                    <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                                        <img src="./assets/images/Patiala Chicken Tikka.jpg" width="100" height="100" loading="lazy" alt="Samosa Chat" class="img-cover">
-                                    </figure>
-                                    <div>
-                                        <div class="title-wrapper">
-                                            <h3 class="title-3">
-                                                <a href="#" class="card-title">Patiala Chicken Tikka</a>
-                                            </h3>
-                                        </div>
-                                        <p class="card-text label-1">
-                                            Juicy Chicken marinated and cooked in Tandoor to perfection with yogurt and spices.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="menu-card hover:card">
-                                    <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                                        <img src="./assets/images/Achari Chicken Wings.jpg" width="100" height="100" loading="lazy" alt="Rooster Chapli Burger" class="img-cover">
-                                    </figure>
-                                    <div>
-                                        <div class="title-wrapper">
-                                            <h3 class="title-3">
-                                                <a href="#" class="card-title">Achari Chicken Wings (6 Pcs.)</a>
-                                            </h3>
-                                        </div>
-                                        <p class="card-text label-1">
-                                            Tangy, spicy wings marinated in traditional Indian pickling spices, grilled to perfection for a crispy exterior and juicy interior.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="menu-card hover:card">
-                                    <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                                        <img src="./assets/images/Desi Fish & Chips.jpg" width="100" height="100" loading="lazy" alt="Lamb Chops" class="img-cover">
-                                    </figure>
-                                    <div>
-                                        <div class="title-wrapper">
-                                            <h3 class="title-3">
-                                                <a href="#" class="card-title">Desi Fish & Chips</a>
-                                            </h3>
-                                        </div>
-                                        <p class="card-text label-1">
-                                            Delicious fusion blending British fish & chips with Indian flavors.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            
-                            <li>
-                                <div class="menu-card hover:card">
-                                    <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                                        <img src="./assets/images/Lamb Chops.JPG" width="100" height="100" loading="lazy" alt="Lamb Chops" class="img-cover">
-                                    </figure>
-                                    <div>
-                                        <div class="title-wrapper">
-                                            <h3 class="title-3">
-                                                <a href="#" class="card-title">Lamb Chops (3 Pcs)</a>
-                                            </h3>
-                                        </div>
-                                        <p class="card-text label-1">
-                                            Single bone Lamb marinated in yogurt and spices.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                        <img src="./assets/images/shape-5.png" width="921" height="1036" loading="lazy" alt="shape" class="shape shape-girl">
-                        <img src="./assets/images/shape-6.png" width="343" height="345" loading="lazy" alt="shape" class="shape move-anim">
-                    </div>
-                    <div class="container">
-                        <p class="section-subtitle text-center label-2">Special Selection</p>
-                        <ul class="grid-list">
-                            <li>
-                                <div class="menu-card hover:card">
-                                    <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                                        <img src="./assets/images/Chicken Biryani.jpg" width="100" height="100" loading="lazy" alt="Chicken Biryani" class="img-cover">
-                                    </figure>
-                                    <div>
-                                        <div class="title-wrapper">
-                                            <h3 class="title-3">
-                                                <a href="#" class="card-title">Chicken Biryani</a>
-                                            </h3>
-                                            <span class="badge label-1">Popular</span>
-                                        </div>
-                                        <p class="card-text label-1">
-                                            Aromatic Chicken Biryani with tender chicken, fragrant basmati rice, and spices. A flavorful, hearty delight.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="menu-card hover:card">
-                                    <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                                        <img src="./assets/images/Dal Makhani.jpg" width="100" height="100" loading="lazy" alt="Dal Makhani" class="img-cover">
-                                    </figure>
-                                    <div>
-                                        <div class="title-wrapper">
-                                            <h3 class="title-3">
-                                                <a href="#" class="card-title">Dal Makhani</a>
-                                            </h3>
-                                        </div>
-                                        <p class="card-text label-1">
-                                            Creamy black lentils simmered with butter and spices.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="menu-card hover:card">
-                                    <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                                        <img src="./assets/images/Chicken Tikka Roll.JPG" width="100" height="100" loading="lazy" alt="Chicken Tikka Roll" class="img-cover">
-                                    </figure>
-                                    <div>
-                                        <div class="title-wrapper">
-                                            <h3 class="title-3">
-                                                <a href="#" class="card-title">Chicken Tikka Roll</a>
-                                            </h3>
-                                        </div>
-                                        <p class="card-text label-1">
-                                            Tandoor grilled chicken wrapped in flaky Malabar paratha served with house special sauce.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="menu-card hover:card">
-                                    <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                                        <img src="./assets/images/Samosa Chat.jpg" width="100" height="100" loading="lazy" alt="Samosa Chat" class="img-cover">
-                                    </figure>
-                                    <div>
-                                        <div class="title-wrapper">
-                                            <h3 class="title-3">
-                                                <a href="#" class="card-title">Samosa Chat</a>
-                                            </h3>
-                                        </div>
-                                        <p class="card-text label-1">
-                                            Samosas, chickpeas, yogurt, tamarind and green chutney, onions, and sev.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="menu-card hover:card">
-                                    <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                                        <img src="./assets/images/Rooster Chapli Burger.JPG" width="100" height="100" loading="lazy" alt="Rooster Chapli Burger" class="img-cover">
-                                    </figure>
-                                    <div>
-                                        <div class="title-wrapper">
-                                            <h3 class="title-3">
-                                                <a href="#" class="card-title">Rooster Chapli Burger</a>
-                                            </h3>
-                                        </div>
-                                        <p class="card-text label-1">
-                                            Juicy chicken patty with zesty homemade sauce, fresh veggies, all in a soft bun.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="menu-card hover:card">
-                                    <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                                        <img src="./assets/images/Lamb Chops.JPG" width="100" height="100" loading="lazy" alt="Lamb Chops" class="img-cover">
-                                    </figure>
-                                    <div>
-                                        <div class="title-wrapper">
-                                            <h3 class="title-3">
-                                                <a href="#" class="card-title">Lamb Chops (3 Pcs)</a>
-                                            </h3>
-                                        </div>
-                                        <p class="card-text label-1">
-                                            Single bone Lamb marinated in yogurt and spices.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
+                        <div class="menu-item">
+                            <h3 class="card-text label-1">Samosa Chat</h3>
+                            <p class="card-text label-1">Samosas, chickpeas, yogurt, tamarind and green chutney, onions, and sev.</p>
+                        </div>
+                        <div class="menu-item">
+                            <h3 class="card-text label-1">Okra & Guac</h3>
+                            <p class="card-text label-1">Crispy okra served with guacamole pineapple chutney.</p>
+                        </div>
+                        <div class="menu-item">
+                            <h3 class="card-text label-1">Patiala Chicken Tikka</h3>
+                            <p class="card-text label-1">Juicy Chicken marinated and cooked in Tandoor with yogurt and spices.</p>
+                        </div>
+                        <div class="menu-item">
+                            <h3 class="card-text label-1">Achari Chicken Wings (6 Pcs.)</h3>
+                            <p class="card-text label-1">Tangy, spicy wings marinated in traditional Indian pickling spices.</p>
+                        </div>
+                        <div class="menu-item">
+                            <h3 class="card-text label-1">Lamb Chops (3 Pcs)</h3>
+                            <p class="card-text label-1">Single bone Lamb marinated in yogurt and spices.</p>
+                        </div>
+                        <p class="section-subtitle text-center label-2">Biryani</p>
+                        <div class="menu-item">
+                            <h3 class="card-text label-1">Chicken Biryani</h3>
+                            <p class="card-text label-1">Aromatic Chicken Biryani with tender chicken, fragrant basmati rice, and spices.</p>
+                        </div>
+                        <p class="section-subtitle text-center label-2">Classics</p>
+                        <div class="menu-item">
+                            <h3 class="card-text label-1">Dal Makhani</h3>
+                            <p class="card-text label-1">Creamy black lentils simmered with butter and spices.</p>
+                        </div>
+                        <div class="menu-item">
+                            <h3 class="card-text label-1">Chana Masala</h3>
+                            <p class="card-text label-1">Savory chickpeas cooked with onions, tomatoes, and spices.</p>
+                        </div>
+                        <div class="menu-item">
+                            <h3 class="card-text label-1">Paneer Makhani</h3>
+                            <p class="card-text label-1">Cottage cheese cubes in a rich, buttery tomato sauce.</p>
+                        </div>
+                        <div class="menu-item">
+                            <h3 class="card-text label-1">Palak Paneer</h3>
+                            <p class="card-text label-1">Spinach and Paneer cooked with aromatic spices.</p>
+                        </div>
+                        <div class="menu-item">
+                            <h3 class="card-text label-1">Butter Chicken</h3>
+                            <p class="card-text label-1">Tender chicken in a creamy tomato- cashew based sauce.</p>
+                        </div>
+                        <div class="menu-item">
+                            <h3 class="card-text label-1">Goat Curry</h3>
+                            <p class="card-text label-1">Slow-cooked goat in a flavorful, spiced curry.</p>
+                        </div>
+                        <p class="section-subtitle text-center label-2">The Perfect Bowl</p>
+                        <div class="menu-item">
+                            <h3 class="card-text label-1">The Perfect Bowl</h3>
+                            <p class="card-text label-1">Choose your rice, curry, legume, and optional bread for a customized bowl.</p>
+                        </div>
+                        <p class="section-subtitle text-center label-2">Desi Burger & Rolls</p>
+                        <div class="menu-item">
+                            <h3 class="card-text label-1">Royal Chapli Burger</h3>
+                            <p class="card-text label-1">Juicy chicken patty with zesty homemade sauce, fresh veggies, all in a soft bun.</p>
+                        </div>
+                        <div class="menu-item">
+                            <h3 class="card-text label-1">Dilli Aloo Tikki Burger</h3>
+                            <p class="card-text label-1">Crispy masala potato patty served on soft bun.</p>
+                        </div>
+                        <div class="menu-item">
+                            <h3 class="card-text label-1">Paneer Tikka Roll</h3>
+                            <p class="card-text label-1">Tandoor grilled Paneer wrapped in flaky Malabar paratha served with house special sauce.</p>
+                        </div>
+                        <div class="menu-item">
+                            <h3 class="card-text label-1">Chicken Tikka Roll</h3>
+                            <p class="card-text label-1">Tandoor grilled chicken wrapped in flaky Malabar paratha served with house special sauce.</p>
+                        </div>
+                        <p class="section-subtitle text-center label-2">Sides</p>
+                        <div class="menu-item">
+                            <h3 class="card-text label-1">Masala Fries</h3>
+                        </div>
+                        <div class="menu-item">
+                            <h3 class="card-text label-1">Cheese Naan</h3>
+                        </div>
+                        <div class="menu-item">
+                            <h3 class="card-text label-1">Butter Naan</h3>
+                        </div>
+                        <div class="menu-item">
+                            <h3 class="card-text label-1">Garlic Naan</h3>
+                        </div>
+                        <div class="menu-item">
+                            <h3 class="card-text label-1">Malabar Paratha</h3>
+                        </div>
+                        <div class="menu-item">
+                            <h3 class="card-text label-1">Basmati Rice</h3>
+                        </div>
+                        <div class="menu-item">
+                            <h3 class="card-text label-1">Saffron Rice</h3>
+                        </div>
+                        <div class="menu-item">
+                            <h3 class="card-text label-1">Boondi Raita</h3>
+                        </div>
+                        <p class="section-subtitle text-center label-2">Drinks</p>
+                        <div class="menu-item">
+                            <h3 class="card-text label-1">Pineapple Refresher</h3>
+                        </div>
+                        <div class="menu-item">
+                            <h3 class="card-text label-1">Mango Lassi</h3>
+                        </div>
+                        <div class="menu-item">
+                            <h3 class="card-text label-1">Guava Lassi</h3>
+                        </div>
+                        <div class="menu-item">
+                            <h3 class="card-text label-1">Limca</h3>
+                        </div>
+                        <div class="menu-item">
+                            <h3 class="card-text label-1">Sparkling Water</h3>
+                        </div>
+                        <p class="section-subtitle text-center label-2">Desserts</p>
+                        <div class="menu-item">
+                            <h3 class="card-text label-1">Gulab Jamun</h3>
+                        </div>
+                        <div class="menu-item">
+                            <h3 class="card-text label-1">Rasmalai</h3>
+                        </div>
                         <p class="menu-text text-center">
                             Open every day from <span class="span">11:00 a.m.</span> to <span class="span">9:00 p.m.</span>
                         </p>
@@ -407,57 +281,8 @@
                     </div>
                 </section>
             </section>
-            <section id="PreFixNonVeg" class="tab-content">
-                <div class="container">
-                    <p class="section-subtitle text-center label-2">Small Plates</p>
-                    <ul class="grid-list">
-                        <li>
-                            <div class="menu-card hover:card">
-                                <div>
-                                    <h3 class="card-text label-1">Samosa Chat</h3>
-                                    <p class="card-text label-1">Samosas, chickpeas, yogurt, tamarind and green chutney, onions, and sev.</p><br>
-                                    <h3 class="card-text label-1">Okra & Guac</h3>
-                                    <p class="card-text label-1">Crispy okra served with guacamole pineapple chutney.</p><br>
-                                    <h3 class="card-text label-1">Crispy Cauliflower</h3>
-                                    <p class="card-text label-1">Cauliflower florets tossed in a mango, chilli and honey glaze.</p><br>
-                                    <h3 class="card-text label-1">Patiala Chicken Tikka</h3>
-                                    <p class="card-text label-1">Juicy Chicken marinated and cooked in Tandoor to perfection with yogurt and spices.</p><br>
-                                    <h3 class="card-text label-1">Achari Chicken Wings (6 Pcs.)</h3>
-                                    <p class="card-text label-1">Tangy, spicy wings marinated in traditional Indian pickling spices, grilled to perfection for a crispy exterior and juicy interior.</p><br>
-                                    <h3 class="card-text label-1">Desi Fish & Chips</h3>
-                                    <p class="card-text label-1">Delicious fusion blending British fish & chips with Indian flavors.</p><br>
-                                    <h3 class="card-text label-1">Lamb Chops (3 Pcs)</h3>
-                                    <p class="card-text label-1">Single bone Lamb marinated in yogurt and spices.</p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <p class="section-subtitle text-center label-2">Special Selection</p>
-                    <ul class="grid-list">
-                        <li>
-                            <div class="menu-card hover:card">
-                                <div>
-                                    <h3 class="card-text label-1">Chicken Biryani</h3>
-                                    <p class="card-text label-1">Aromatic Chicken Biryani with tender chicken, fragrant basmati rice, and spices. A flavorful, hearty delight.</p><br>
-                                    <h3 class="card-text label-1">Dal Makhani</h3>
-                                    <p class="card-text label-1">Creamy black lentils simmered with butter and spices.</p><br>
-                                    <h3 class="card-text label-1">Chicken Tikka Roll</h3>
-                                    <p class="card-text label-1">Tandoor grilled chicken wrapped in flaky Malabar paratha served with house special sauce.</p><br>
-                                    <h3 class="card-text label-1">Samosa Chat</h3>
-                                    <p class="card-text label-1">Samosas, chickpeas, yogurt, tamarind and green chutney, onions, and sev.</p><br>
-                                    <h3 class="card-text label-1">Rooster Chapli Burger</h3>
-                                    <p class="card-text label-1">Juicy chicken patty with zesty homemade sauce, fresh veggies, all in a soft bun.</p><br>
-                                    <h3 class="card-text label-1">Lamb Chops (3 Pcs)</h3>
-                                    <p class="card-text label-1">Single bone Lamb marinated in yogurt and spices.</p><br>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </section>
         </article>
     </main>
-
     <footer class="footer section has-bg-image text-center" style="background-image: url('./assets/images/footer-bg.jpg')">
         <div class="container">
             <div class="footer-top grid-list">
@@ -493,7 +318,7 @@
                     <li><a href="#" class="label-2 footer-link hover-underline">Home</a></li>
                     <li><a href="#" class="label-2 footer-link hover-underline">Menu</a></li>
                     <li><a href="#" class="label-2 footer-link hover-underline">About Us</a></li>
-                    <li><a href="file:///C:/Users/deyaa/Desktop/WeDesi/restaurant-main/restaurant-main/index.html#contact" class="label-2 footer-link hover-underline">Contact</a></li>
+                    <li><a href="#contact" class="label-2 footer-link hover-underline">Contact</a></li>
                 </ul>
                 <ul class="footer-list">
                     <li><a href="https://www.instagram.com/wedesiny" class="label-2 footer-link hover-underline">Instagram</a></li>
@@ -505,33 +330,11 @@
             </div>
         </div>
     </footer>
-
     <a href="#top" class="back-top-btn active" aria-label="back to top" data-back-top-btn>
         <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
     </a>
     <script defer src="./assets/js/script.js"></script>
-<script defer type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script defer nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-    window.openTab = function(evt, tabName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tab-content");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        document.getElementById(tabName).style.display = "block";
-        evt.currentTarget.className += " active";
-    }
-
-    // Open default tab
-    document.getElementById("CompleteMenu").style.display = "block";
-});
-
-</script>
+    <script defer type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script defer nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
